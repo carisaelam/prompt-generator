@@ -179,14 +179,14 @@ What change do I most want to see in my world?
 What kind of self-care would be most useful right now? 
 When I feel loved, how do I show up? 
 How does my inner voice sound when it is beautiful?  
-Will this matter in two days? Two months? Two years? 
-Does this need to be said? Does this need to be said by you? Does this need to be said by you now?
+What are you stressed about? Will this matter in two days? Two months? Two years? 
+What do you really want to say? Does this need to be said? Does this need to be said by you? Does this need to be said by you now?
 Which path most closely aligns with your highest values? 
-Will this allow you to use your strengths or will you primarily be performing in areas you don’t enjoy?
-How much do you want this? What am you willing to give up to get it? 
+What path do you want to take? Will this allow you to use your strengths or will you primarily be performing in areas you don’t enjoy?
+Think of something you want. How much do you want this? What am you willing to give up to get it? 
 What would you do if money wasn’t a factor? 
-If you had no say and someone else made this choice for you, which choice would make you feel disappointed? Why? 
-What would you wish for someone you love, if they were in this situation? 
+Think about a recent choice you have made. If you had no say and someone else made this choice for you, which choice would make you feel disappointed? Why? 
+What would you wish for someone you love, if they were in the same situation you are currently in? 
 What outcome are you working toward? 
 What if you did nothing? 
 How do you feel in your body right now? 
