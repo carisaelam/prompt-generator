@@ -18,11 +18,10 @@ body {
 }
 
 .grid-container {
-  display: grid;
-  justify-items: center;
-  grid-template-areas:
-    "header header"
-    "main main";
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   width: 100%;
   height: auto;
 }
@@ -39,20 +38,118 @@ body {
 }
 
 .button {
-  font-size: 1rem;
-  padding: 10px;
+  font-size: 1.25rem;
+  padding: 15px;
   border-radius: 10px;
   background-color: var(--pink);
   border: solid var(--light);
+  animation: fadeIn 2s;
+  color: var(--darkest);
+}
+
+.button:hover {
+  cursor: pointer;
+  /* background-color: #e9baac; */
+}
+
+.button:active {
+  border: inset #e1dfd2 2px;
+  padding: 9px;
 }
 
 .main {
-  grid-area: main;
-  height: auto;
+  display: flex;
+  align-items: center;
+  height: 420px;
   background-color: var(--light);
-  width: 80%;
+  width: 450px;
   text-align: center;
   padding: 35px;
   font-size: 1.5rem;
   border-radius: 20px;
+  animation: fadeIn 2s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.container p {
+  animation: fadeIn 2s;
+  color: var(--darkest);
+}
+
+.random-img {
+  border-radius: 20px;
+}
+
+.image-and-calendar {
+  height: 420px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.image-container {
+  display: flex;
+  width: 80%;
+  justify-content: center;
+  align-items: center;
+  animation: fadeIn 2s;
+}
+
+.content-container {
+  display: flex;
+  width: 800px;
+  height: 500px;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.calendar {
+  width: 300px;
+  height: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+  animation: fadeIn 2s;
+  color: var(--darkest);
+}
+
+.left,
+.right {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.left {
+  width: 58%;
+  background-color: var(--light);
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
+}
+
+.right {
+  width: 42%;
+  background-color: var(--darkest);
+  color: var(--light);
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+}
+
+#date {
+  font-size: 100px;
 }

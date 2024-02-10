@@ -1,30 +1,53 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>📝 Prompt Generator</title>
-    <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css?family=Noto+Sans:100,200,300,regular,500,600,700,800,900,100italic,200italic,300italic,italic,500italic,600italic,700italic,800italic,900italic" rel="stylesheet" />
-</head>
-<body>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Noto+Sans:100,200,300,regular,500,600,700,800,900,100italic,200italic,300italic,italic,500italic,600italic,700italic,800italic,900italic"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
     <div class="grid-container">
-        <header class="header">
+      <header class="header">
+        <button class="button">Random Prompt</button>
+      </header>
 
-            <button class="button">Random Prompt</button>
+      <!-- overall container -->
+      <div class="content-container">
+        <!-- image and calendar -->
+        <div class="image-and-calendar">
+          <!-- image -->
+          <div class="image-container">
+            <img
+              class="random-img"
+              src="https://picsum.photos/300/200"
+              alt="random-img"
+            />
+          </div>
 
-        </header>
+          <!-- calendar -->
+          <div class="calendar">
+            <div class="left">
+              <p id="date">10</p>
+              <p id="day">Saturday</p>
+            </div>
+            <div class="right">
+              <p id="month">September</p>
+              <p id="year">2024</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- prompt block -->
         <main class="main">
-            <div class="container">
-
-
+          <div class="container"></div>
         </main>
-
-    </div>
-
-
-        
+      </div>
     </div>
     <script src="script.js"></script>
-</body>
+  </body>
 </html>
