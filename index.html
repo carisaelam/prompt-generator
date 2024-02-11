@@ -9,13 +9,10 @@
       href="https://fonts.googleapis.com/css?family=Noto+Sans:100,200,300,regular,500,600,700,800,900,100italic,200italic,300italic,italic,500italic,600italic,700italic,800italic,900italic"
       rel="stylesheet"
     />
+    <link href="https://fonts.googleapis.com/css?family=Inconsolata:200,300,regular,500,600,700,800,900" rel="stylesheet" />
   </head>
   <body>
     <div class="grid-container">
-      <header class="header">
-        <button class="button">Random Prompt</button>
-      </header>
-
       <!-- overall container -->
       <div class="content-container">
         <!-- image and calendar -->
@@ -45,7 +42,12 @@
         <!-- prompt block -->
         <main class="main">
           <div class="container"></div>
+          <button class="button">Random Prompt</button>
         </main>
+
+      </div>
+      <div id="clock-container">
+        <div id="clock">00:00:00</div>
       </div>
     </div>
     <script src="script.js"></script>

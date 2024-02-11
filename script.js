@@ -621,36 +621,6 @@ Is there something you need to give up or cut down on? Cigarettes/alcohol/caffei
 
 `;
 
-const split = prompts.split("\n");
-
-const button = document.querySelector(".button");
-
-const container = document.querySelector(".container");
-
-function getRandomNumber() {
-  return Math.floor(Math.random() * split.length);
-}
-
-button.addEventListener("click", function () {
-  let oldPrompt = container.querySelector("p");
-
-  if (oldPrompt) {
-    container.removeChild(oldPrompt);
-  }
-
-  let randomNumber = getRandomNumber();
-  let randomPrompt = document.createElement("p");
-  randomPrompt.textContent = split[randomNumber];
-  container.appendChild(randomPrompt);
-});
-
-const date = document.getElementById("date");
-const day = document.getElementById("day");
-const month = document.getElementById("month");
-const year = document.getElementById("year");
-
-const today = new Date();
-
 const weekDays = [
   "Sunday",
   "Monday",
@@ -675,6 +645,52 @@ const allMonths = [
   "November",
   "December",
 ];
+
+const split = prompts.split("\n");
+const button = document.querySelector(".button");
+const container = document.querySelector(".container");
+const date = document.getElementById("date");
+const day = document.getElementById("day");
+const month = document.getElementById("month");
+const year = document.getElementById("year");
+const accessKey = "_gCKZn8SUqVwNQCXr6z6_hEVwKolHbJMl9cq7lwsn2w";
+const unsplashImage = document.getElementById("unsplash-image");
+
+const today = new Date();
+
+function getRandomNumber() {
+  return Math.floor(Math.random() * split.length);
+}
+
+button.addEventListener("click", function () {
+  let oldPrompt = container.querySelector("p");
+
+  if (oldPrompt) {
+    container.removeChild(oldPrompt);
+  }
+
+  let randomNumber = getRandomNumber();
+  let randomPrompt = document.createElement("p");
+  randomPrompt.textContent = split[randomNumber];
+  container.appendChild(randomPrompt);
+});
+
+//Clock
+
+function updateClock() {
+  const now = new Date();
+  let hours = now.getHours();
+  const meridiem = hours >= 12 ? "PM" : "AM";
+  hours = hours % 12 || 12;
+  hours = hours.toString().padStart(2, 0);
+  const minutes = now.getMinutes().toString().padStart(2, 0);
+  const seconds = now.getSeconds().toString().padStart(2, 0);
+  const timeString = `${hours}:${minutes}:${seconds} ${meridiem}`;
+  document.getElementById("clock").textContent = timeString;
+}
+
+updateClock();
+setInterval(updateClock, 1000);
 
 date.innerHTML = (today.getDate() < 10 ? "0" : "") + today.getDate();
 day.innerHTML = weekDays[today.getDay()];
