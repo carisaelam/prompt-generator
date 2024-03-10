@@ -9,7 +9,10 @@
       href="https://fonts.googleapis.com/css?family=Noto+Sans:100,200,300,regular,500,600,700,800,900,100italic,200italic,300italic,italic,500italic,600italic,700italic,800italic,900italic"
       rel="stylesheet"
     />
-    <link href="https://fonts.googleapis.com/css?family=Inconsolata:200,300,regular,500,600,700,800,900" rel="stylesheet" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Inconsolata:200,300,regular,500,600,700,800,900"
+      rel="stylesheet"
+    />
   </head>
   <body>
     <div class="grid-container">
@@ -44,10 +47,32 @@
           <div class="container"></div>
           <button class="button">Random Prompt</button>
         </main>
-
       </div>
+
+      <!-- clock block -->
       <div id="clock-container">
         <div id="clock">00:00:00</div>
+      </div>
+
+      <!-- weather block -->
+      <div id="weather-container">
+        <div id="city"></div>
+
+        <div class="weather-container">
+          <div class="currently">
+            <h2>Currently:</h2>
+            <div id="temp"></div>
+            <div id="description"></div>
+          </div>
+        </div>
+
+        <div class="forecast-container">
+          <div class="tomorrow">
+            <h2>Tomorrow:</h2>
+            <div id="temp-tomorrow"></div>
+            <div id="description-tomorrow"></div>
+          </div>
+        </div>
       </div>
     </div>
     <script src="script.js"></script>

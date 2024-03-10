@@ -1,3 +1,8 @@
+//TODO 
+// - make a toggle between madison and athens 
+// - figure out how to search by 
+
+
 const prompts = `
 
 Write about a person who always makes you laugh. 
@@ -696,3 +701,60 @@ date.innerHTML = (today.getDate() < 10 ? "0" : "") + today.getDate();
 day.innerHTML = weekDays[today.getDay()];
 month.innerHTML = allMonths[today.getMonth()];
 year.innerHTML = today.getFullYear();
+
+
+//Weather
+function renderWeather(weather) {
+  const city = document.getElementById("city");
+  const temp = document.getElementById("temp");
+  const desc = document.getElementById("description");
+
+  const temperature = `${Math.floor(weather.main.temp)}°`;
+  const description = weather.weather[0].description;
+
+  city.innerHTML = `${weather.name}, GA`;
+  temp.innerHTML = `${temperature}`;
+  desc.innerHTML = `${description.toLowerCase()}`;
+}
+
+function renderForecast(forecast) {
+  const tempTomorrow = document.getElementById("temp-tomorrow");
+  const descTomorrow = document.getElementById("description-tomorrow");
+  const tempTomorrowMin = Math.floor(forecast.list[1].main.temp_min);
+  const tempTomorrowMax = Math.floor(forecast.list[1].main.temp_max);
+
+  const temperatureTomorrow = `${tempTomorrowMin}–${tempTomorrowMax}°`;
+  const descriptionTomorrow = forecast.list[1].weather[0].description;
+
+  tempTomorrow.innerHTML = `${temperatureTomorrow}`;
+  descTomorrow.innerHTML = `${descriptionTomorrow.toLowerCase()}`;
+}
+
+async function fetchWeather(zipCode) {
+  const url = `https://api.openweathermap.org/data/2.5/weather?zip=${zipCode},US&appid=f036c23ce0d0e31d5d459fd8c27e0cda&units=imperial`;
+
+  try {
+    const response = await fetch(url);
+    const weather = await response.json();
+    console.log(weather);
+    renderWeather(weather);
+  } catch (error) {
+    console.error("Error fetching weather:", error);
+  }
+}
+
+async function fetchForecast(zipCode) {
+  const url = `https://api.openweathermap.org/data/2.5/forecast?zip=${zipCode},US&appid=f036c23ce0d0e31d5d459fd8c27e0cda&units=imperial`;
+
+  try {
+    const response = await fetch(url);
+    const forecast = await response.json();
+    console.log(forecast);
+    renderForecast(forecast);
+  } catch (error) {
+    console.error("Error fetching forecast:", error);
+  }
+}
+
+fetchWeather(30605);
+fetchForecast(30605);

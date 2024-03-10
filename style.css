@@ -24,6 +24,7 @@ body {
   align-items: center;
   width: 100%;
   height: auto;
+  margin-bottom: 200px;
 }
 
 .header {
@@ -97,6 +98,7 @@ body {
 
 .random-img {
   border-radius: 20px;
+  animation: fadeIn 2s;
 }
 
 .image-and-calendar {
@@ -123,7 +125,6 @@ body {
   height: 500px;
   align-items: center;
   justify-content: space-between;
-  margin-top: 50px;
 }
 
 .calendar {
@@ -177,6 +178,7 @@ body {
   justify-content: center;
   text-align: center;
   animation: fadeIn 2s;
+  margin-bottom: 40px;
 }
 
 #clock {
@@ -192,4 +194,59 @@ body {
   background-color: rgba(100, 93, 93, 0.35);
   -webkit-backdrop-filter: blur(2px);
   animation: fadeIn 2s;
+}
+
+/* Weather Styling */
+
+#weather-container {
+  font-family: "Noto Sans", sans-serif;
+  height: 200px;
+  width: 800px;
+  border-radius: 20px;
+  background-image: url("weather.jpg");
+  background-size: cover;
+  background-position: 20% 52%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  animation: fadeIn 2s;
+}
+
+#city {
+  font-size: 3rem;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  color: #463f3a;
+  background-color: rgba(222, 233, 255, 0.448);
+  height: 100%;
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
+}
+
+.weather-container,
+.forecast-container {
+  background-color: rgba(222, 233, 255, 0.448);
+  padding: 0 10px;
+  width: 300px;
+  height: 100%;
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.currently h2,
+.tomorrow h2 {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 2px;
+}
+
+.currently div,
+.tomorrow div {
+  font-size: 2rem;
 }
